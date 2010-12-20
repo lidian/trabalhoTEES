@@ -15,7 +15,9 @@
 </p>
 <p>
   <b>Trecho:</b>
-   ${codigo.trecho}
+   <pre class="brush: ${codigo.linguagem}">
+		${codigo.trecho}
+	</pre>
 </p>
 
 <a href="<c:url value="/codigos/${codigo.id}/edit"/>">Edit</a>

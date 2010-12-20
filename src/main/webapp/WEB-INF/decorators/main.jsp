@@ -6,11 +6,21 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><decorator:title default="Vraptor Scaffold"/></title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/stylesheets/scaffold.css"/>" />  
+    <link rel="stylesheet" type="text/css" href="<c:url value="/stylesheets/scaffold.css"/>" />
+    <link href="<c:url value="/syntaxhighlighter_3.0.83/styles/shCore.css"/>" rel="stylesheet" type="text/css" />
+	<link href="<c:url value="/syntaxhighlighter_3.0.83/styles/shThemeDefault.css"/>" rel="stylesheet" type="text/css" />  
     <decorator:head/>
   </head>
   <body>
     <decorator:body/>
     <script type="text/javascript" src="<c:url value="/javascripts/jquery.min.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="/syntaxhighlighter_3.0.83/scripts/shCore.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/syntaxhighlighter_3.0.83/scripts/shBrushRuby.js"/>"></script>
+	<script type="text/javascript">
+     SyntaxHighlighter.all()
+	</script>  
   </body>
 </html>

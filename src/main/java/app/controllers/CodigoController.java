@@ -38,7 +38,13 @@ public class CodigoController {
 	@Path("/codigos")
 	public void create(Codigo codigo) {
 		validator.validate(codigo);
+		/*
+		validator.checking(new Validations(){{
+	        that(!codigo.getNome().isEmpty(), "error","nomeIsRequired");
+	    }});
+		*/
 		validator.onErrorUsePageOf(this).newCodigo();
+		
 		repository.create(codigo);
 		result.redirectTo(this).index();
 	}
@@ -46,13 +52,6 @@ public class CodigoController {
 	@Get
 	@Path("/codigos/new")
 	public Codigo newCodigo() {
-		List<String> linguagems=new ArrayList<String>();
-		linguagems.add("Java");
-		linguagems.add("C");
-		linguagems.add("C#");
-		linguagems.add("Ruby");
-		result.include("linguagems", linguagems);
-
 		return new Codigo();
 	}
 	
@@ -68,12 +67,6 @@ public class CodigoController {
 	@Get
 	@Path("/codigos/{codigo.id}/edit")
 	public Codigo edit(Codigo codigo) {
-		List<String> linguagems=new ArrayList<String>();
-		linguagems.add("Java");
-		linguagems.add("C");
-		linguagems.add("C#");
-		linguagems.add("Ruby");
-		result.include("linguagems", linguagems);
 		return repository.find(codigo.getId());
 	}
 

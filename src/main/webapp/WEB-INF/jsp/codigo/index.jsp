@@ -15,7 +15,7 @@
 
 <c:forEach items="${codigoList}" var="codigo">
   <tr>
-      <td>
+    <td>
       ${codigo.nome}
     </td>
       <td>
@@ -25,7 +25,9 @@
       ${codigo.linguagem}
     </td>
       <td>
-      ${codigo.trecho}
+		<pre class="brush: ${codigo.linguagem}">
+		${codigo.trecho}
+		</pre>
     </td>
       <td><a href="<c:url value="/codigos/${codigo.id}"/>">show</a></td>
     <td><a href="<c:url value="/codigos/${codigo.id}/edit"/>">edit</a></td>

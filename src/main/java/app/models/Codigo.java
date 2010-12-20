@@ -2,7 +2,6 @@ package app.models;
 
 @javax.persistence.Entity
 public class Codigo extends Entity {
-	
 	private String nome;
 	private String tags;
 	private String linguagem;

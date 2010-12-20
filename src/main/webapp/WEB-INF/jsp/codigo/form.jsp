@@ -22,22 +22,19 @@
   </div>
   <div class="field">
     Linguagem:<br />
-	 <input type="radio"  name="langs" value="Java" <c:if test="${codigo.linguagem eq \"Java\" }"> checked </c:if> onclick="javascript:changeLang('Java');"> JAVA
-     <input type="radio" name="langs" value="C" <c:if test="${codigo.linguagem eq \"C\" }"> checked </c:if> onclick="javascript:changeLang('C');"> C
-     <input type="radio" name="langs" value="Ruby" <c:if test="${codigo.linguagem eq \"Ruby\" }"> checked </c:if> onclick="javascript:changeLang('Ruby');"> RUBY
+	 <input type="radio"  name="langs" value="java" <c:if test="${codigo.linguagem eq \"java\" }"> checked </c:if> onclick="javascript:changeLang('java');"> JAVA
+     <input type="radio" name="langs" value="c" <c:if test="${codigo.linguagem eq \"c\" }"> checked </c:if> onclick="javascript:changeLang('c');"> C
+     <input type="radio" name="langs" value="ruby" <c:if test="${codigo.linguagem eq \"ruby\" }"> checked </c:if> onclick="javascript:changeLang('ruby');"> RUBY
      <input type="hidden" name="codigo.linguagem" id="codigo.linguagem" value="${codigo.linguagem}"/>
-	 <script type="text/javascript" >
-       
-       function changeLang(lang)
-       {
+	 <script type="text/javascript" >       
+       function changeLang(lang) {
                $('[name=codigo.linguagem]').val(lang);
        }
-
 	</script>
   </div>
   <div class="field">
     Trecho:<br />
-    <textarea name="codigo.trecho" value="${codigo.trecho}"></textarea>
+    <textarea  name="codigo.trecho" rows="3" cols="40">${codigo.trecho}</textarea>
   </div>
   <div class="actions">
     <button type="submit">send</button>
